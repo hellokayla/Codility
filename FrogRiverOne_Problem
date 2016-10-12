@@ -1,0 +1,33 @@
+// you can also use imports, for example:
+ import java.util.*;
+
+class Solution {
+    public int solution(int X, int[] A) {
+        
+        Set<Integer> temparray =  new HashSet<Integer>();
+        int leafsum = 0; 
+        int xsum= ((X)*(X+1))/2; 
+        for (int i = 0; i < A.length; i++) {
+            
+
+            if ( A[i] <= X && !temparray.contains(A[i])) {
+                
+                leafsum += A[i]; 
+                temparray.add(A[i]);
+                   
+            }
+            
+            
+            if ((A[i] == X ) && (leafsum == xsum) ) {
+             
+             return i;
+            }
+            
+        }
+        //System.out.println(xsum);
+       
+        return -1;
+        
+    }
+
+}
