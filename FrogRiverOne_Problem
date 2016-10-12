@@ -4,7 +4,7 @@
 class Solution {
     public int solution(int X, int[] A) {
         
-        List<Integer> temparray =  new ArrayList<Integer>();
+        Set<Integer> temparray =  new HashSet<Integer>();
         int leafsum = 0; 
         int xsum= ((X)*(X+1))/2; 
         for (int i = 0; i < A.length; i++) {
