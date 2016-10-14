@@ -1,0 +1,23 @@
+
+import java.util.*;
+
+class Solution {
+    public int[] solution(int N, int[] A) {
+        // counter can only hold up to N 
+        int[] counter = new int[N];
+        
+        for (int i = 0; i < A.length; i++) {
+            
+            if (A[i] <= N && A[i] >=1) {
+             
+                // Want to increase X 
+                counter[A[i]]++;
+                
+            }
+                        
+        }
+        
+        return counter; 
+        
+    }
+}
